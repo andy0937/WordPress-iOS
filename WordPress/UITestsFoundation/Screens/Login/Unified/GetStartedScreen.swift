@@ -37,12 +37,12 @@ public class GetStartedScreen: ScreenObject {
         )
     }
 
-    public func proceedWith(email: String) -> PasswordScreen {
+    public func proceedWith(email: String) throws -> PasswordScreen {
         emailTextField.tap()
         emailTextField.typeText(email)
         continueButton.tap()
 
-        return PasswordScreen()
+        return try PasswordScreen()
     }
 
     public func selectHelp() throws -> SupportScreen {
